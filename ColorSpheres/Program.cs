@@ -6,7 +6,8 @@ namespace ColorSpheres
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP1!");
+            Color color1 = new Color(255,50,50);
+            Sphere sphere = new Sphere(color1,3);
         }
     }
 }
