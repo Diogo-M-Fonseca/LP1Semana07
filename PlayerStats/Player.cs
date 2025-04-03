@@ -33,5 +33,13 @@ namespace PlayerStats
                 WinRate = _playedGames / _wonGames;
             }
         }
+        public void PlayGame(bool win)
+        {
+            _playedGames++;
+            if (win == true)
+            {
+                _wonGames++;
+            }
+        }
     }
 }
