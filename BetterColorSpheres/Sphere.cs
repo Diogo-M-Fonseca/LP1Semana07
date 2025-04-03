@@ -12,5 +12,20 @@ namespace BetterColorSpheres
             _radius = radius;
             _timesThrown = 0;
         }
+
+         public void Pop()
+        {
+            _radius = 0;
+        }
+
+        public void Throw()
+        {
+           if (_radius > 0)
+            {
+                _timesThrown++;
+            }
+        }
+
+        public int GetTimesThrown()=> _timesThrown;
     }
 }
