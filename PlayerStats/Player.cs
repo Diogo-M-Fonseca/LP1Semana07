@@ -5,7 +5,7 @@ namespace PlayerStats
         private float _highScore;
         private int _playedGames;
         private int _wonGames;
-        private string _name;
+        private readonly string _name;
 
         public float HighScore
         {
@@ -22,5 +22,16 @@ namespace PlayerStats
             }
         }
         public string Name {get;}
+        public float WinRate
+        {
+            get
+            {
+                return WinRate;
+            }
+            set
+            {
+                WinRate = _playedGames / _wonGames;
+            }
+        }
     }
 }
