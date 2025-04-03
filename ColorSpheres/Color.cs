@@ -17,6 +17,15 @@ namespace ColorSpheres
             _alpha = alpha;
         }
 
+        /// contrutor que aceita apenas os parametros de cor e define opacidade
+        public Color(byte red, byte green, byte blue)
+        {
+            _red = red;
+            _green = green;
+            _blue = blue;
+            _alpha = 255;
+        }
+
 
 
     }
