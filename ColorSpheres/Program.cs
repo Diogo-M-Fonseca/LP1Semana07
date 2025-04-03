@@ -30,6 +30,15 @@ namespace ColorSpheres
             sphere4.Pop();
             sphere.Throw();
             
+            System.Console.WriteLine($"The sphere1 with the color {color1.GetGrey()}");
+            System.Console.WriteLine($" was thrown: {sphere.GetTimesThrown()} times");
+            System.Console.WriteLine($"The sphere2 with the color {color2.GetGrey()}");
+            System.Console.WriteLine($" was thrown: {sphere2.GetTimesThrown()} times");
+            System.Console.WriteLine($"The sphere3 with the color {color3.GetGrey()}");
+            System.Console.WriteLine($" was thrown: {sphere3.GetTimesThrown()} times");
+            System.Console.WriteLine($"The sphere4 with the color {color4.GetGrey()}");
+            System.Console.WriteLine($" was thrown: {sphere4.GetTimesThrown()} times");
+
 
         }
     }
