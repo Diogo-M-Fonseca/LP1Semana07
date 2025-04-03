@@ -5,6 +5,7 @@ namespace PlayerStats
         private float _highScore;
         private int _playedGames;
         private int _wonGames;
+        private string _name;
 
         public float HighScore
         {
@@ -20,5 +21,6 @@ namespace PlayerStats
                 }
             }
         }
+        public string Name {get;}
     }
 }
