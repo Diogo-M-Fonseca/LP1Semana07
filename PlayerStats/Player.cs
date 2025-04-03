@@ -7,6 +7,15 @@ namespace PlayerStats
         private int _wonGames;
         private readonly string _name;
 
+        public Player(string name)
+        {
+            _name = name;
+            _playedGames = 0;
+            _wonGames = 0;
+            _highScore = 0;
+        }
+
+
         public float HighScore
         {
             get
