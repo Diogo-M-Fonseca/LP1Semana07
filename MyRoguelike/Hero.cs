@@ -15,6 +15,11 @@ namespace MyRoguelike
             }
         }
 
+        public int Level
+        {
+            get => 1 + xp / 1000; //xp errado provavelmente
+        }
+
 
 
 
