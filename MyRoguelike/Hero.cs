@@ -44,6 +44,7 @@ namespace MyRoguelike
         public void TakeDamage(float damage)
         {
             health -= (int)damage;
+            xp += (int)damage/20;
         }
 
 
