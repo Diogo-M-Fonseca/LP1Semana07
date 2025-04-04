@@ -41,6 +41,11 @@ namespace MyRoguelike
             get => 100 + (Level - 1) * 20;
         }
 
+        public void TakeDamage(float damage)
+        {
+            health -= (int)damage;
+        }
+
 
 
 
