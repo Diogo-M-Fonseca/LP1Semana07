@@ -6,6 +6,14 @@ namespace MyRoguelike
         private int health;
         private string Name {get;}
 
+
+        public Hero(string name)
+        {
+            Name = name;
+            xp = 0;
+            Health = (int)MaxHealth;
+        }
+
         public int XP
         {
             get => xp;
@@ -17,7 +25,7 @@ namespace MyRoguelike
 
         public int Level
         {
-            get => 1 + xp / 1000; //xp errado provavelmente
+            get => 1 + XP / 1000; //xp errado provavelmente
         }
 
         public int Health 
@@ -25,7 +33,7 @@ namespace MyRoguelike
             get => health;
             set //provavelmente consigo juntar este set com o get
             {
-                if (health < 0)
+                if (health < 0) // verificar se é o Health certo
                 {
                     health = 0;
                 }
