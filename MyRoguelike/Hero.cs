@@ -4,14 +4,14 @@ namespace MyRoguelike
     {
         private int xp;
         private int health;
-        private string Name {get;}
+        public string Name {get;}
 
 
         public Hero(string name)
         {
             Name = name;
             xp = 0;
-            Health = (int)MaxHealth;
+            health = (int)MaxHealth;
         }
 
         public int XP
@@ -19,7 +19,7 @@ namespace MyRoguelike
             get => xp;
             set
             {
-                xp++;
+                xp += value;
             }
         }
 
@@ -33,11 +33,12 @@ namespace MyRoguelike
             get => health;
             set //provavelmente consigo juntar este set com o get
             {
-                if (health < 0) // verificar se é o Health certo
+                health = value;
+                if (Health <= 0) // verificar se é o Health certo
                 {
                     health = 0;
                 }
-                else if (health > MaxHealth)
+                else if (Health > MaxHealth)
                 {
                     health = (int)MaxHealth; // pode haver problemas com a conv
                 }
