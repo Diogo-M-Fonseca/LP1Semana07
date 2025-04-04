@@ -25,22 +25,22 @@ namespace MyRoguelike
 
         public int Level
         {
-            get => 1 + XP / 1000; //xp errado provavelmente
+            get => 1 + XP / 1000; 
         }
 
         public int Health 
         {
             get => health;
-            set //provavelmente consigo juntar este set com o get
+            set 
             {
                 health = value;
-                if (Health <= 0) // verificar se é o Health certo
+                if (Health <= 0) 
                 {
                     health = 0;
                 }
                 else if (Health > MaxHealth)
                 {
-                    health = (int)MaxHealth; // pode haver problemas com a conv
+                    health = (int)MaxHealth; 
                 }
             }
         }
