@@ -28,7 +28,7 @@ classDiagram
         +GetGrey:byte
     }
 
-    Sphere --> Color
+    Color --> Sphere
 
 
 
