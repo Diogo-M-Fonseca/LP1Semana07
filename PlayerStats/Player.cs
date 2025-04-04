@@ -2,52 +2,54 @@ namespace PlayerStats
 {
     public class Player
     {
-        private float _highScore;
-        private int _playedGames;
-        private int _wonGames;
-        private readonly string _name;
+        private float highScore;
+        private int playedGames;
+        private int wonGames;
+        public string Name {get;}
 
         public Player(string name)
         {
-            _name = name;
-            _playedGames = 0;
-            _wonGames = 0;
-            _highScore = 0;
+            Name = name;
+            playedGames = 0;
+            wonGames = 0;
+            highScore = 0;
         }
 
 
-        public float HighScore
+       public float HighScore
         {
-            get
-            {
-                return _highScore;
-            }
+            get => highScore;
             set
             {
-                if (HighScore > _highScore)
+                if (value > highScore)
                 {
-                    _highScore = HighScore;
+                    highScore = value;
                 }
             }
         }
-        public string Name {get;}
         public float WinRate
         {
             get
             {
-                return WinRate;
+
+                if (playedGames > 0)
+                {
+                    return (float)wonGames / playedGames;
+                }
+                else
+                {
+                    return 0;
+                }
+
             }
-            set
-            {
-                WinRate = _playedGames / _wonGames;
-            }
+
         }
         public void PlayGame(bool win)
         {
-            _playedGames++;
-            if (win == true)
+            playedGames++;
+            if (win)
             {
-                _wonGames++;
+                wonGames++;
             }
         }
     }
